@@ -1,0 +1,5 @@
+export const EASY_LEVEL_TEXT = `The cat sat on the mat. I love to read books. The sun is shining brightly. She enjoys playing in the park. We had pizza for dinner last night.`
+
+export const MEDIUM_LEVEL_TEXT = `On a sunny day, the children decided to go outside and play. They ran around the yard, laughing and enjoying the warm weather. Some played soccer while others flew kites high in the sky. It was a perfect day for outdoor fun, and everyone felt happy and carefree.`
+
+export const HARD_LEVEL_TEXT = `In the heart of the ancient forest, sunlight filtered through the dense canopy, casting intricate patterns on the forest floor. The air was rich with the scent of damp earth and blooming wildflowers. Birds chirped melodiously, their songs echoing through the trees, while a gentle breeze rustled the leaves. As I walked deeper into this enchanting realm, I marveled at the towering trees that had stood for centuries, their gnarled branches telling stories of time long past. Nature's beauty was both humbling and inspiring, reminding me of the delicate balance that sustains life.`
