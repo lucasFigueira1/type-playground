@@ -26,18 +26,23 @@ const TextContainer = () => {
     })
   }
 
-  useEffect(() => {
-    function handleKeyDown(event: KeyboardEvent) {
-      setPrevKey(event.key);
+  /**
+   * Handles the key down event
+   * @param {KeyboardEvent} event - The keyboard event
+   */
+  function handleKeyDown(event: KeyboardEvent) {
+    if (prevKey === 'Control' && event.key === 'Backspace') return removeLastWord();
 
-      if (prevKey === 'Control' && event.key === 'Backspace') return removeLastWord();
-      if (event.key === 'Backspace') return handleBackspace();
+    setPrevKey(event.key);
 
-      if (!IGNORE_KEYS.includes(event.key)) {
-        setUserTypedText((prev) => prev + event.key);
-      }
+    if (event.key === 'Backspace') return handleBackspace();
+
+    if (!IGNORE_KEYS.includes(event.key)) {
+      setUserTypedText((prev) => prev + event.key);
     }
+  }
 
+  useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
 
     return () => {
